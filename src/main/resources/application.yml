@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+#    url: jdbc:mysql://192.168.101.128/weixin_order?characterEncoding=utf-8&useSSL=false
+#    url: jdbc:mysql://192.168.43.193/weixin_order?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.101.129/weixin_order?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+#    host: 192.168.43.193
+    host: 192.168.101.128
+    port: 6379
+server:
+  context-path: /sell
+wechat:
+  mpAppId: wxadbf549bfa7e0433                      #公众号id
+  mpAppSecret: xxxxxxx    #公众号密钥
+  wechatMpAuthorize: http://rainvip.natapp1.cc     #内网穿透地址
+  mchId: 1409146202                                #微信支付 商务id
+  mchKey: xxxx               #微信支付  密钥
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://rainvip.natapp1.cc/sell/pay/notify
+  openAppId: xxx                 #微信开放平台  扫码登录使用
+  openAppSecret: xx #微信开放平台
+  templateId: xx-7eRm-tZdsCdfo9esZHG7Q54Rq8NQNiY   #模板id用来收到微信通知得
+projectUrl:
+  wechatMpAuthorize: http://rainvip.natapp1.cc
+  wechatOpenAuthorize: http://rainvip.natapp1.cc
+  sell: http://rainvip.natapp1.cc
+logging:
+  level:
+    weixin.dataobject.mapper: trace

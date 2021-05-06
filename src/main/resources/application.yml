@@ -12,6 +12,8 @@ spring:
     default-property-inclusion: non_null
   redis:
 #    host: 192.168.43.193
+#    host: 192.168.101.128
+#    host: 192.168.101.128
     host: 192.168.101.128
     port: 6379
 server:
